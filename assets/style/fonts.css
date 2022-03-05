@@ -27,7 +27,7 @@
     url('../fonts/HelveticaNeueCyr-BlackItalic.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-BlackItalic.ttf') format('truetype');
     font-weight: 800;
-    font-style: normal;
+    font-style: italic;
 }
 
 @font-face {
@@ -49,7 +49,7 @@
     url('../fonts/HelveticaNeueCyr-HeavyItalic.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-HeavyItalic.ttf') format('truetype');
     font-weight: 600;
-    font-style: normal;
+    font-style: italic;
 }
 
 @font-face {
@@ -60,7 +60,7 @@
     url('../fonts/HelveticaNeueCyr-Italic.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-Italic.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 }
 
 @font-face {
@@ -70,7 +70,7 @@
     url('../fonts/HelveticaNeueCyr-Thin.eot?#iefix') format('embedded-opentype'),
     url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 200;
     font-style: normal;
 }
 
@@ -92,8 +92,8 @@
     url('../fonts/HelveticaNeueCyr-MediumItalic.eot?#iefix') format('embedded-opentype'),
     url('../fonts/HelveticaNeueCyr-MediumItalic.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-MediumItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 500;
+    font-style: italic;
 }
 
 @font-face {
@@ -103,7 +103,7 @@
     url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
     url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -114,8 +114,8 @@
     url('../fonts/HelveticaNeueCyr-LightItalic.eot?#iefix') format('embedded-opentype'),
     url('../fonts/HelveticaNeueCyr-LightItalic.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-LightItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 300;
+    font-style: italic;
 }
 
 @font-face {
@@ -125,7 +125,7 @@
     url('../fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
     url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -136,8 +136,8 @@
     url('../fonts/HelveticaNeueCyr-ThinItalic.eot?#iefix') format('embedded-opentype'),
     url('../fonts/HelveticaNeueCyr-ThinItalic.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-ThinItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 200;
+    font-style: italic;
 }
 
 @font-face {
@@ -147,7 +147,7 @@
     url('../fonts/HelveticaNeueCyr-UltraLight.eot?#iefix') format('embedded-opentype'),
     url('../fonts/HelveticaNeueCyr-UltraLight.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-UltraLight.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -158,7 +158,7 @@
     url('../fonts/HelveticaNeueCyr-UltraLightItalic.eot?#iefix') format('embedded-opentype'),
     url('../fonts/HelveticaNeueCyr-UltraLightItalic.woff') format('woff'),
     url('../fonts/HelveticaNeueCyr-UltraLightItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 300;
+    font-style: italic;
 }
 

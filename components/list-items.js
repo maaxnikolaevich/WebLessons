@@ -49,47 +49,28 @@ export default class ListItems{
     }
     render(){
         this.renderParent(this.data)
-        // this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data));
     }
     
     renderParent(data) {
         let newSpan=document.createElement('span');
-        let newItemElem=this.renderStructItem(structPage.listItem)
-        let newInnerElem=this.renderStructItem(structPage.listItemInner)
+        let newItemElem=this.renderStructItem(structPage.listItem);
+        let newInnerElem=this.renderStructItem(structPage.listItemInner);
         newSpan.innerHTML=data.name;
         if (data.hasChildren){
-            newInnerElem.append(this.renderStructItem(structPage.imgArrow),this.renderStructItem(structPage.imgFolder),newSpan)
-            newItemElem.append(newInnerElem)
-            this.el.append(newItemElem)
-        //     let currentNode="<div class=\"list-item list-item_open\" data-parent>\n"+
-        //         "<div class=\"list-item__inner\">\n"+
-        //         "<img class=\"list-item__arrow\" src=\"./assets/img/chevron-down.png\" alt=\"chevron-down\""+
-        //         " data-open>\n" +"<img class=\"list-item__folder\"" +
-        //         " src=\"./assets/img/folder.png\" alt=\"folder\">\n"+"<span>"+data.name+"</span>"
-        //         +"</div>\n"+"<div class=\"list-item__items\">"
-        //    
+            newInnerElem.append(this.renderStructItem(structPage.imgArrow),this.renderStructItem(structPage.imgFolder),newSpan);
+            newItemElem.append(newInnerElem);
+            this.el.append(newItemElem);
             data.items.forEach(node=>{
                 this.renderParent(node);
             });
-        //     return currentNode+"</div> </div>"
         }   
         else
         {
-            newInnerElem.append(this.renderStructItem(structPage.imgFolder),newSpan)
-            newItemElem.append(newInnerElem)
-            this.el.append(newItemElem)
-            // return "<div class=\"list-item__inner\">\n"+
-            // "<img class=\"list-item__folder\"" +
-            //     " src=\"./assets/img/folder.png\" alt=\"folder\">\n"+ 
-            //     "<span>"+data.name+"</span>\n"+"</div>"
+            newInnerElem.append(this.renderStructItem(structPage.imgFolder),newSpan);
+            newItemElem.append(newInnerElem);
+            this.el.append(newItemElem);
         }
     }
-    // renderInnerElem(name){
-    //     let newInnerElem=this.renderStructItem(structPage.listItemInner)
-    //     newInnerElem.append(this.renderStructItem(structPage.imgArrow),this.renderStructItem(structPage.imgFolder),newSpan)
-    //     newItemElem.append(newInnerElem)
-    //     this.el.append(newItemElem)
-    // }
     renderStructItem(structItem){
         let newItem=document.createElement(structItem.tag);
         newItem.className=structItem.class;

@@ -12,9 +12,9 @@ export const TicTacToe = {
 
   // Матрица 3 на 3 с информацией о полях
   matrix: [
-    ['O', 'O', 'O'],
-    ['O', 'O', 'O'],
-    ['O', 'O', 'O'],
+    [null, null, null],
+    [null, null, null],
+    [null, null, null],
   ],
 
   // массив победных комбинаций

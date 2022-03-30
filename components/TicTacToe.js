@@ -102,6 +102,14 @@ export const TicTacToe = {
    * @returns {boolean} - true если есть пустые блоки, false - если нет
    */
   checkHasEmptyBlocks() {
+    for (let i=0; i < this.matrix.length; i++){
+      for (let j=0; j < this.matrix[i].length; j++ ){
+        if (this.matrix[i][j] === null){
+          return true;
+        }
+      }
+    }
+    return false;
   },
 
   /**
@@ -116,6 +124,14 @@ export const TicTacToe = {
    * Сброс данных и очищение дом дерева
    */
   restartGame() {
+    this.isGameEnd = false;
+    this.isXTurn = true;
+    for (let i=0; i < this.matrix.length; i++){
+      for (let j=0; j < this.matrix[i].length; j++ ){
+        this.matrix[i][j] = null;
+        for(const item of this.boxes) item.textContent = ''
+      }
+    }
   },
   
   /**
@@ -148,6 +164,11 @@ export const TicTacToe = {
    * @param {boolean?} clear - если true - отчистить ячейку в матрице
    */
   setBlockValue(target, clear) {
+    const [row, col] = this.getBlockPosition(target)
+    if (clear) this.matrix[row - 1][col - 1] = null
+    else (
+        this.matrix[row - 1][col - 1] = this.getCurrentTurnValue()
+    )
   },
 
   /**
@@ -158,6 +179,11 @@ export const TicTacToe = {
    * @param {boolean?} clear - если true - отчистить target
    */
   setBlockDom(target, clear) {
+    const [row, col] = this.getBlockPosition(target);
+    if (clear) target.innerText = ''
+    else (
+        target.innerText = this.matrix[row - 1][col - 1]
+    )
   },
 
   /**
@@ -165,12 +191,15 @@ export const TicTacToe = {
    * @returns {string} Текущий ход 'X' или 'O'
    */
   getCurrentTurnValue() {
+    if (this.isXTurn) return 'X'
+    else return '0'
   },
 
   /**
    * Изменение текущего хода в данных
    */
   changeTurnValue() {
+    this.isXTurn = !this.isXTurn;
   },
 
   /**
@@ -197,5 +226,6 @@ export const TicTacToe = {
    * Установить статус об окончании игры
    */
   setGameEndStatus() {
+    this.isGameEnd = !this.isGameEnd;
   }
 }
